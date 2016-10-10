@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cidadão Ijuense</string>
+
+    <!-- Título da Activity Principal -->
+    <string name="text_cidadao">Cidadão</string>
+    <string name="text_ijuiense">Ijuiense</string>
 </resources>

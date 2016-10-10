@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="369.30359dp"
+    android:height="321.75751dp"
+    android:viewportHeight="321.75751"
+    android:viewportWidth="369.30359">
+
+    <path
+        android:pathData="M5.62491,161.549 L92.0624,5.625 L273.474,5.625 L364.179,161.549 L274.54,316.133
+L97.397,316.133 L5.62491,161.549 Z"
+        android:strokeColor="#355c7e"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10"
+        android:strokeWidth="9" />
+    <group>
+        <clip-path android:pathData="M0,652 L464,652 L464,0 L0,0 L0,652 Z" />
+        <path
+            android:fillColor="#355c7e"
+            android:pathData="M184.923,246.912 C137.393,246.912,98.8682,208.387,98.8682,160.857
+C98.8682,113.327,137.393,74.8361,184.923,74.8361
+C232.411,74.8361,270.944,113.327,270.944,160.857
+C270.944,208.387,232.411,246.912,184.923,246.912 M184.923,65.034
+C131.968,65.034,89.0569,107.937,89.0569,160.857
+C89.0569,213.812,131.968,256.724,184.923,256.724
+C237.834,256.724,280.747,213.812,280.747,160.857
+C280.747,107.937,237.834,65.0336,184.923,65.0336"
+            android:strokeWidth="1" />
+        <path
+            android:fillColor="#355c7e"
+            android:pathData="M195.831,182.647 L200.047,96.4297 L169.953,96.4297 L174.143,182.647
+L195.831,182.647 Z"
+            android:strokeWidth="1" />
+        <path
+            android:fillColor="#355c7e"
+            android:pathData="M185.017,192.159 C174.915,192.159,167.88,199.22,167.88,209.494
+C167.88,219.365,174.71,226.802,184.615,226.802 L185.017,226.802
+C195.291,226.802,201.924,219.365,201.924,209.494
+C201.752,199.22,195.095,192.159,185.017,192.159"
+            android:strokeWidth="1" />
+    </group>
+    <group>
+        <clip-path android:pathData="M0,652 L464,652 L464,0 L0,0 L0,652 Z" />
+        <group>
+            <clip-path android:pathData="M1700.01,40.789 L620.01,40.789 L620.01,1255.91 L1700.01,1255.91 L1700.01,40.79 Z" />
+            <group>
+                <clip-path android:pathData="M200.018,-8.386 L2196.02,-8.386 L2196.02,1365.33 L200.02,1365.33 L200.02,-8.39 Z" />
+            </group>
+        </group>
+    </group>
+</vector>

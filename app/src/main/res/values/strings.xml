@@ -4,4 +4,11 @@
     <!-- Título da Activity Principal -->
     <string name="text_cidadao">Cidadão</string>
     <string name="text_ijuiense">Ijuiense</string>
+
+    <!-- Título de Ocorrências-->
+    <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
+    <string name="ocor_tit_denuncias_ou_reclamacoes">Denúncias ou Reclamações</string>
+    <string name="ocor_tit_limpeza_urbana">Limpeza Urbana</string>
+    <string name="ocor_tit_vias_publicas_e_transito">Vias Públicas ou Trânsito</string>
+    <string name="ocor_tit_iluminacao_publica">Iluminação Pública</string>
 </resources>

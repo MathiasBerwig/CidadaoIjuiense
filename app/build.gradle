@@ -44,4 +44,9 @@ dependencies {
      * Stepper Indicator
      */
     compile 'com.github.badoualy:stepper-indicator:1.0.6'
+
+    /**
+     * ColorTextView
+     */
+    compile 'loic.teillard.colortextview:colortextview:1.0.0'
 }

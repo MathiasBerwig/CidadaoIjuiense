@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity implements CardPagerAdapter.
         setupViewPager();
     }
 
+    @Override
+    public void onBackPressed() {
+        final int currentItem = viewPager.getCurrentItem();
+        if (currentItem == 0) {
+            super.onBackPressed();
+        } else {
+            viewPager.setCurrentItem(currentItem - 1, true);
+        }
+    }
+
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null)

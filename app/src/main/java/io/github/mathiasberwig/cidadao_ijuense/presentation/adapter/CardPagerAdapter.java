@@ -20,8 +20,10 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     private List<CardView> mViews;
     private List<TipoOcorrencia> mData;
     private float mBaseElevation;
+    private OcorrenciaClickListener mListener;
 
-    public CardPagerAdapter() {
+    public CardPagerAdapter(OcorrenciaClickListener listener) {
+        mListener = listener;
         mData = new ArrayList<>();
         mViews = new ArrayList<>();
 
@@ -69,6 +71,12 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
             mBaseElevation = cardView.getCardElevation();
         }
         cardView.setMaxCardElevation(mBaseElevation * MAX_ELEVATION_FACTOR);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.onOcorrenciaClick(to);
+            }
+        });
 
         imageView.setImageResource(to.icone);
         textView.setText(to.titulo);
@@ -81,5 +89,9 @@ public class CardPagerAdapter extends PagerAdapter implements CardAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((View) object);
         mViews.set(position, null);
+    }
+
+    public interface OcorrenciaClickListener {
+        void onOcorrenciaClick(TipoOcorrencia ocorrencia);
     }
 }

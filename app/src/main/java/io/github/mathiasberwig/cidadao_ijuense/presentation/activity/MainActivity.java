@@ -1,6 +1,5 @@
 package io.github.mathiasberwig.cidadao_ijuense.presentation.activity;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,11 +12,13 @@ import com.badoualy.stepperindicator.StepperIndicator;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.mathiasberwig.cidadao_ijuense.R;
+import io.github.mathiasberwig.cidadao_ijuense.data.model.TipoOcorrencia;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.adapter.CardPagerAdapter;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
-import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment.OnCategoriaSelecionadaListener;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.view.CustomViewPager;
 
-public class MainActivity extends AppCompatActivity implements OnCategoriaSelecionadaListener {
+public class MainActivity extends AppCompatActivity implements CardPagerAdapter.OcorrenciaClickListener {
     private static final String TAG = "MainActivity";
 
     // Views
@@ -53,8 +54,8 @@ public class MainActivity extends AppCompatActivity implements OnCategoriaSeleci
     }
 
     @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void onOcorrenciaClick(TipoOcorrencia ocorrencia) {
+        viewPager.setCurrentItem(1, true);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -65,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements OnCategoriaSeleci
         @Override
         public Fragment getItem(int position) {
             switch (position) {
-                case 0:
-                    return SelecionarCategoriaFragment.newInstance();
+                case 0: return SelecionarCategoriaFragment.newInstance();
+                case 1: return SelecionarLocalFragment.newInstance();
                 default:
                     // TODO: Remover após colocar todos os fragmentos
                     return SelecionarCategoriaFragment.newInstance();

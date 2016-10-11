@@ -30,6 +30,11 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:24.2.1'
 
     /**
+     * Google Play Services
+     */
+    compile 'com.google.android.gms:play-services-location:9.6.1'
+
+    /**
      * ButterKnife
      */
     compile 'com.jakewharton:butterknife:8.4.0'

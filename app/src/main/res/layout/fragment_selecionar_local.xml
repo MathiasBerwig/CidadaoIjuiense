@@ -1,7 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colortextview="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment">
 
-</FrameLayout>
+    <!-- Qual o endereço da ocorrência? -->
+    <loic.teillard.colortextview.ColorTextView
+        android:id="@+id/tv_endereco_ocorrencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold"
+        colortextview:clt_color1="@android:color/white"
+        colortextview:clt_color2="@color/colorAccent"
+        colortextview:clt_color3="@android:color/white"
+        colortextview:clt_spaces="true"
+        colortextview:clt_txt1="@string/text_endereco_ocorrencia_1"
+        colortextview:clt_txt2="@string/text_endereco_ocorrencia_2"
+        colortextview:clt_txt3="@string/text_endereco_ocorrencia_3" />
+
+    <!-- Selecionar Local -->
+    <Button
+        android:id="@+id/btn_informar_local"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="30dp"
+        android:text="@string/action_selecionar_local"
+        android:textSize="20sp"
+        tools:ignore="ContentDescription" />
+
+    <!-- Não informar -->
+    <Button
+        android:id="@+id/btn_nao_informar_local"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="30dp"
+        android:text="@string/action_nao_informar_local"
+        android:textSize="20sp"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>

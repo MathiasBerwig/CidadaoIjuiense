@@ -32,7 +32,7 @@ dependencies {
     /**
      * Google Play Services
      */
-    compile 'com.google.android.gms:play-services-location:9.6.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
 
     /**
      * ButterKnife

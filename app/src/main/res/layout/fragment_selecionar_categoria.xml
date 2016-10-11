@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment">
+
+    <!-- Cartões de Categoria -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="20dp"
+        android:paddingEnd="@dimen/card_padding"
+        android:paddingLeft="@dimen/card_padding"
+        android:paddingRight="@dimen/card_padding"
+        android:paddingStart="@dimen/card_padding" />
+
+    <!-- CATEGORIA -->
+    <TextView
+        android:id="@+id/tv_titulo_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view_pager"
+        android:background="@color/colorPrimaryDark"
+        android:includeFontPadding="false"
+        android:text="@string/text_categoria"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="34sp"
+        android:textStyle="normal|bold" />
+
+    <!-- SELECIONE A -->
+    <TextView
+        android:id="@+id/tv_titulo_selecione_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_titulo_categoria"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-5sp"
+        android:background="@color/colorPrimaryDark"
+        android:includeFontPadding="false"
+        android:paddingTop="16dp"
+        android:text="@string/text_selecione_a"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold" />
+
+</RelativeLayout>

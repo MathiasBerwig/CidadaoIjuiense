@@ -5,6 +5,10 @@
     <string name="text_cidadao">Cidadão</string>
     <string name="text_ijuiense">Ijuiense</string>
 
+    <!-- Seleção de Categoria -->
+    <string name="text_selecione_a">Selecione a</string>
+    <string name="text_categoria">Categoria</string>
+
     <!-- Título de Ocorrências-->
     <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
     <string name="ocor_tit_denuncias_ou_reclamacoes">Denúncias ou Reclamações</string>

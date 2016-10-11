@@ -1,18 +1,32 @@
 package io.github.mathiasberwig.cidadao_ijuense.presentation.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.badoualy.stepperindicator.StepperIndicator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.mathiasberwig.cidadao_ijuense.R;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment.OnCategoriaSelecionadaListener;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.view.CustomViewPager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnCategoriaSelecionadaListener {
     private static final String TAG = "MainActivity";
 
     // Views
     @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.container) CustomViewPager viewPager;
+    @BindView(R.id.stepper_indicator) StepperIndicator stepperIndicator;
+
+    // Instances
+    private SectionsPagerAdapter sectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +36,46 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setupToolbar();
+        setupViewPager();
     }
 
     private void setupToolbar() {
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayShowTitleEnabled(false);
+    }
+
+    private void setupViewPager() {
+        sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(sectionsPagerAdapter);
+        viewPager.setPagingEnabled(false);
+        stepperIndicator.setViewPager(viewPager);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return SelecionarCategoriaFragment.newInstance();
+                default:
+                    // TODO: Remover após colocar todos os fragmentos
+                    return SelecionarCategoriaFragment.newInstance();
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
     }
 }

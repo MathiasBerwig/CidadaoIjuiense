@@ -15,13 +15,15 @@ import butterknife.ButterKnife;
 import io.github.mathiasberwig.cidadao_ijuense.R;
 import io.github.mathiasberwig.cidadao_ijuense.data.model.TipoOcorrencia;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.adapter.CardPagerAdapter;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.DescreverOcorrenciaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.view.CustomViewPager;
 
 public class MainActivity extends AppCompatActivity
         implements CardPagerAdapter.OcorrenciaClickListener,
-        SelecionarLocalFragment.OnLocalSelecionadoListener {
+        SelecionarLocalFragment.OnLocalSelecionadoListener,
+        DescreverOcorrenciaFragment.OnDescricaoCompletaListener {
 
     private static final String TAG = "MainActivity";
 
@@ -74,6 +76,15 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onLocalSelecionado(Place place) {
+        proximaPagina();
+    }
+
+    @Override
+    public void onDescricaoCompleta(String titulo, String descricao) {
+        proximaPagina();
+    }
+
+    private void proximaPagina() {
         final int currentItem = viewPager.getCurrentItem();
         viewPager.setCurrentItem(currentItem + 1, true);
     }
@@ -88,6 +99,7 @@ public class MainActivity extends AppCompatActivity
             switch (position) {
                 case 0: return SelecionarCategoriaFragment.newInstance();
                 case 1: return SelecionarLocalFragment.newInstance();
+                case 2: return DescreverOcorrenciaFragment.newInstance();
                 default:
                     // TODO: Remover após colocar todos os fragmentos
                     return SelecionarCategoriaFragment.newInstance();

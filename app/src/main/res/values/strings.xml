@@ -5,7 +5,7 @@
     <string name="text_cidadao">Cidadão</string>
     <string name="text_ijuiense">Ijuiense</string>
 
-    <!-- Seleção de Categoria -->
+    <!-- Textos do Layout -->
     <string name="text_selecione_a">Selecione a</string>
     <string name="text_categoria">Categoria</string>
     <string name="text_bem_vindo">Seja bem vindo!</string>
@@ -13,6 +13,8 @@
     <string name="text_endereco_ocorrencia_1">QUAL O</string>
     <string name="text_endereco_ocorrencia_2">ENDEREÇO</string>
     <string name="text_endereco_ocorrencia_3">DA OCORRÊNCIA?</string>
+    <string name="text_descricao_ocorrencia_1">CONTE-NOS O</string>
+    <string name="text_descricao_ocorrencia_2">PROBLEMA</string>
 
     <!-- Título de Ocorrências-->
     <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
@@ -24,7 +26,13 @@
     <!-- Ações -->
     <string name="action_selecionar_local">Selecionar no mapa</string>
     <string name="action_nao_informar_local">Não informar</string>
+    <string name="action_pronto">Pronto</string>
 
     <!-- Toasts -->
     <string name="toast_selecione_local">Mudou de ideia? Clique no botão \'NÃO INFORMAR\'.</string>
+
+    <!-- Hint de Edits -->
+    <string name="hint_titulo_ocorrencia">TÍTULO DA OCORRÊNCIA</string>
+    <string name="hint_descricao_ocorrencia">DESCRIÇÃO DA OCORRÊNCIA</string>
+    <string name="toast_preencha_corretamente">Preencha os campos corretamente</string>
 </resources>

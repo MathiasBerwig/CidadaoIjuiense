@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colortextview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.DescreverOcorrenciaFragment">
+
+    <!-- Conte-nos o problema -->
+    <loic.teillard.colortextview.ColorTextView
+        android:id="@+id/tv_descricao_ocorrencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold"
+        colortextview:clt_color1="@android:color/white"
+        colortextview:clt_color2="@color/colorAccent"
+        colortextview:clt_spaces="true"
+        colortextview:clt_txt1="@string/text_descricao_ocorrencia_1"
+        colortextview:clt_txt2="@string/text_descricao_ocorrencia_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_descricao_ocorrencia"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <!-- TÍTULO DA OCORRÊNCIA -->
+        <EditText
+            android:id="@+id/input_titulo_ocorrencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/hint_titulo_ocorrencia"
+            android:imeOptions="actionNext"
+            android:inputType="textShortMessage"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="12dp" />
+
+        <!-- DESCRIÇÃO DA OCORRÊNCIA -->
+        <EditText
+            android:id="@+id/input_descricao_ocorrencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="20"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top"
+            android:hint="@string/hint_descricao_ocorrencia"
+            android:inputType="textMultiLine"
+            android:padding="12dp" />
+
+        <!-- Botão Pronto -->
+        <Button
+            android:id="@+id/btn_pronto_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:layout_weight="0"
+            android:text="@string/action_pronto"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

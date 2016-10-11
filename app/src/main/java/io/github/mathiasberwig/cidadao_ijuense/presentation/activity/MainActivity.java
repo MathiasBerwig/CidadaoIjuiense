@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.badoualy.stepperindicator.StepperIndicator;
+import com.google.android.gms.location.places.Place;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,7 +19,10 @@ import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarC
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.view.CustomViewPager;
 
-public class MainActivity extends AppCompatActivity implements CardPagerAdapter.OcorrenciaClickListener {
+public class MainActivity extends AppCompatActivity
+        implements CardPagerAdapter.OcorrenciaClickListener,
+        SelecionarLocalFragment.OnLocalSelecionadoListener {
+
     private static final String TAG = "MainActivity";
 
     // Views
@@ -66,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements CardPagerAdapter.
     @Override
     public void onOcorrenciaClick(TipoOcorrencia ocorrencia) {
         viewPager.setCurrentItem(1, true);
+    }
+
+    @Override
+    public void onLocalSelecionado(Place place) {
+        final int currentItem = viewPager.getCurrentItem();
+        viewPager.setCurrentItem(currentItem + 1, true);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

@@ -24,4 +24,7 @@
     <!-- Ações -->
     <string name="action_selecionar_local">Selecionar no mapa</string>
     <string name="action_nao_informar_local">Não informar</string>
+
+    <!-- Toasts -->
+    <string name="toast_selecione_local">Mudou de ideia? Clique no botão \'NÃO INFORMAR\'.</string>
 </resources>

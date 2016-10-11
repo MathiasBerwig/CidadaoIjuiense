@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -19,7 +18,6 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.github.mathiasberwig.cidadao_ijuense.R;
@@ -33,9 +31,6 @@ public class SelecionarLocalFragment extends Fragment {
      * Request code passed to the PlacePicker intent to identify its result when it returns.
      */
     private static final int REQUEST_PLACE_PICKER = 1;
-
-    // Views
-    @BindView(R.id.btn_informar_local) Button btnInformarLocal;
 
     public static SelecionarLocalFragment newInstance() {
         return new SelecionarLocalFragment();
@@ -112,6 +107,11 @@ public class SelecionarLocalFragment extends Fragment {
         }
         // Start the Intent by requesting a result, identified by a request code.
         startActivityForResult(intent, REQUEST_PLACE_PICKER);
+    }
+
+    @OnClick(R.id.btn_nao_informar_local)
+    public void avancarSemLocal() {
+        listener.onLocalSelecionado(null);
     }
 
     public interface OnLocalSelecionadoListener {

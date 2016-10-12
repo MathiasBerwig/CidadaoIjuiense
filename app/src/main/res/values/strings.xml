@@ -37,6 +37,7 @@
     <string name="action_sair">Sair</string>
     <string name="action_sim">Sim</string>
     <string name="action_cancelar">Cancelar</string>
+    <string name="action_submeter">Submeter</string>
     <string name="cb_receber_feedback">Desejo receber feedback sobre esta solicitação</string>
     <string name="cb_ocorrencia_anonima">Prefiro não me identificar</string>
 

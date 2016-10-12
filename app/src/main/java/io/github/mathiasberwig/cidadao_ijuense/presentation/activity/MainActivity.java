@@ -1,5 +1,6 @@
 package io.github.mathiasberwig.cidadao_ijuense.presentation.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,6 +17,7 @@ import io.github.mathiasberwig.cidadao_ijuense.R;
 import io.github.mathiasberwig.cidadao_ijuense.data.model.Ocorrencia;
 import io.github.mathiasberwig.cidadao_ijuense.data.model.TipoOcorrencia;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.adapter.CardPagerAdapter;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.AnexarImagemFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.DescreverOcorrenciaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.ProtocoloFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity
         implements CardPagerAdapter.OcorrenciaClickListener,
         SelecionarLocalFragment.OnLocalSelecionadoListener,
         DescreverOcorrenciaFragment.OnDescricaoCompletaListener,
+        AnexarImagemFragment.OnImagemAnexadaListener,
         SubmeterOcorrenciaFragment.OnSubmeterOcorrenciaListener,
         ProtocoloFragment.OnProtocoloRecebidoListener {
 
@@ -97,6 +100,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public void onImagemAnexada(Uri uri) {
+        proximaPagina();
+        ocorrencia.setImagem(uri);
+    }
+
+    @Override
     public void onOcorrenciaSubmetida(String nome, String telefone, String email, boolean feedback) {
         proximaPagina();
         ocorrencia.setNome(nome);
@@ -131,15 +140,16 @@ public class MainActivity extends AppCompatActivity
                 case 0: return SelecionarCategoriaFragment.newInstance();
                 case 1: return SelecionarLocalFragment.newInstance();
                 case 2: return DescreverOcorrenciaFragment.newInstance();
-                case 3: return SubmeterOcorrenciaFragment.newInstance();
-                case 4: return ProtocoloFragment.newInstance(ocorrencia.isFeedback());
+                case 3: return AnexarImagemFragment.newInstance();
+                case 4: return SubmeterOcorrenciaFragment.newInstance();
+                case 5: return ProtocoloFragment.newInstance(ocorrencia.isFeedback());
                 default: return null;
             }
         }
 
         @Override
         public int getCount() {
-            return 5;
+            return 6;
         }
     }
 }

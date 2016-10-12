@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colortextview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ANEXAR IMAGEM -->
+    <loic.teillard.colortextview.ColorTextView
+        android:id="@+id/tv_anexar_imagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold"
+        colortextview:clt_color1="@android:color/white"
+        colortextview:clt_color2="@color/colorAccent"
+        colortextview:clt_spaces="true"
+        colortextview:clt_txt1="@string/text_anexar_imagem_1"
+        colortextview:clt_txt2="@string/text_anexar_imagem_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_anexar_imagem"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Câmera -->
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_photo_camera_white_36dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="30dp"
+            android:text="@string/action_camera"
+            android:textSize="18sp" />
+
+        <!-- Galeria -->
+        <Button
+            android:id="@+id/btn_galeria"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_photo_library_white_36dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="30dp"
+            android:text="@string/action_galeria"
+            android:textSize="18sp" />
+
+        <!-- Não Anexar -->
+        <Button
+            android:id="@+id/btn_nao_anexar_imagem"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_highlight_off_white_36dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="30dp"
+            android:text="@string/action_nao_anexar_imagem"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

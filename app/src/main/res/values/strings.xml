@@ -21,6 +21,8 @@
     <string name="text_protocolo_enviado">PROTOCOLO ENVIADO</string>
     <string name="text_orientacao_protocolo_feedback">Você receberá novidades sobre o andamento da solicitação em seu e-mail.</string>
     <string name="text_orientacao_protocolo_sem_feedback">Você optou por não receber feedback sobre esta solicitação.</string>
+    <string name="text_anexar_imagem_1">ANEXAR</string>
+    <string name="text_anexar_imagem_2">IMAGEM</string>
 
     <!-- Título de Ocorrências-->
     <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
@@ -37,7 +39,10 @@
     <string name="action_sair">Sair</string>
     <string name="action_sim">Sim</string>
     <string name="action_cancelar">Cancelar</string>
+    <string name="action_camera">Câmera</string>
+    <string name="action_galeria">Galeria</string>
     <string name="action_submeter">Submeter</string>
+    <string name="action_nao_anexar_imagem">Não anexar</string>
     <string name="cb_receber_feedback">Desejo receber feedback sobre esta solicitação</string>
     <string name="cb_ocorrencia_anonima">Prefiro não me identificar</string>
 

@@ -1,5 +1,7 @@
 package io.github.mathiasberwig.cidadao_ijuense.data.model;
 
+import android.net.Uri;
+
 public class Ocorrencia {
 
     private String tipo;
@@ -10,6 +12,7 @@ public class Ocorrencia {
     private String telefone;
     private String email;
     private boolean feedback;
+    private Uri imagem;
 
     public String getTipo() {
         return tipo;
@@ -73,5 +76,13 @@ public class Ocorrencia {
 
     public void setLocal(String local) {
         this.local = local;
+    }
+
+    public Uri getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(Uri imagem) {
+        this.imagem = imagem;
     }
 }

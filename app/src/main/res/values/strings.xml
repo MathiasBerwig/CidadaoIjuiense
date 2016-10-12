@@ -17,6 +17,10 @@
     <string name="text_descricao_ocorrencia_2">PROBLEMA</string>
     <string name="text_submeter_ocorrencia_1">SUBMETER</string>
     <string name="text_submeter_ocorrencia_2">OCORRÊNCIA</string>
+    <string name="text_enviando_protocolo">ENVIANDO PROTOCOLO</string>
+    <string name="text_protocolo_enviado">PROTOCOLO ENVIADO</string>
+    <string name="text_orientacao_protocolo_feedback">Você receberá novidades sobre o andamento da solicitação em seu e-mail.</string>
+    <string name="text_orientacao_protocolo_sem_feedback">Você optou por não receber feedback sobre esta solicitação.</string>
 
     <!-- Título de Ocorrências-->
     <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
@@ -29,6 +33,10 @@
     <string name="action_selecionar_local">Selecionar no mapa</string>
     <string name="action_nao_informar_local">Não informar</string>
     <string name="action_pronto">Pronto</string>
+    <string name="action_nova_solicitacao">Nova solicitação</string>
+    <string name="action_sair">Sair</string>
+    <string name="action_sim">Sim</string>
+    <string name="action_cancelar">Cancelar</string>
     <string name="cb_receber_feedback">Desejo receber feedback sobre esta solicitação</string>
     <string name="cb_ocorrencia_anonima">Prefiro não me identificar</string>
 
@@ -42,8 +50,7 @@
     <string name="hint_nome_usuario">SEU NOME</string>
     <string name="hint_email_usuario">SEU EMAIL</string>
     <string name="hint_telefone_usuario">SEU TELEFONE</string>
+
+    <!-- Diálogos -->
     <string name="dialog_tit_confirmacao_anonimo">Você tem certeza?</string>
     <string name="dialog_mes_confirmacao_anonimo">Desta forma não será possível acompanhar o andamento da sua solicitação.</string>
-    <string name="action_sim">Sim</string>
-    <string name="action_cancelar">Cancelar</string>
-</resources>

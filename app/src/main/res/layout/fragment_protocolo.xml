@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.ProtocoloFragment">
+
+    <!-- ENVIANDO PROTOCOLO / PROTOCOLO ENVIADO -->
+    <TextView
+        android:id="@+id/tv_status_protocolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_enviando_protocolo"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="34sp"
+        android:textStyle="normal|bold" />
+
+    <ViewSwitcher
+        android:id="@+id/view_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- SPINNER -->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="top|center_horizontal"
+            app:SpinKit_Color="@color/colorAccent" />
+
+        <!-- FINALIZAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_orientacao_protocolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/text_orientacao_protocolo_feedback"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="normal|bold" />
+
+            <!-- Nova Solicitação -->
+            <Button
+                android:id="@+id/btn_nova_solicitacao"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="30dp"
+                android:text="@string/action_nova_solicitacao"
+                android:textSize="20sp"
+                tools:ignore="ContentDescription" />
+
+            <!-- Sair -->
+            <Button
+                android:id="@+id/btn_sair"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="30dp"
+                android:text="@string/action_sair"
+                android:textSize="20sp"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </ViewSwitcher>
+</LinearLayout>

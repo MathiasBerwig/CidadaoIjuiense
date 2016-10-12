@@ -13,9 +13,11 @@ import com.google.android.gms.location.places.Place;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.mathiasberwig.cidadao_ijuense.R;
+import io.github.mathiasberwig.cidadao_ijuense.data.model.Ocorrencia;
 import io.github.mathiasberwig.cidadao_ijuense.data.model.TipoOcorrencia;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.adapter.CardPagerAdapter;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.DescreverOcorrenciaFragment;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.ProtocoloFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SubmeterOcorrenciaFragment;
@@ -25,9 +27,12 @@ public class MainActivity extends AppCompatActivity
         implements CardPagerAdapter.OcorrenciaClickListener,
         SelecionarLocalFragment.OnLocalSelecionadoListener,
         DescreverOcorrenciaFragment.OnDescricaoCompletaListener,
-        SubmeterOcorrenciaFragment.OnSubmeterOcorrenciaListener {
+        SubmeterOcorrenciaFragment.OnSubmeterOcorrenciaListener,
+        ProtocoloFragment.OnProtocoloRecebidoListener {
 
     private static final String TAG = "MainActivity";
+
+    private Ocorrencia ocorrencia = new Ocorrencia();
 
     // Views
     @BindView(R.id.toolbar) Toolbar toolbar;
@@ -68,27 +73,42 @@ public class MainActivity extends AppCompatActivity
         sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(sectionsPagerAdapter);
         viewPager.setPagingEnabled(false);
-        stepperIndicator.setViewPager(viewPager);
+        stepperIndicator.setViewPager(viewPager, true);
     }
 
     @Override
-    public void onOcorrenciaClick(TipoOcorrencia ocorrencia) {
+    public void onOcorrenciaClick(TipoOcorrencia tipoOcorrencia) {
         viewPager.setCurrentItem(1, true);
+        ocorrencia.setTipo(getString(tipoOcorrencia.titulo));
     }
 
     @Override
     public void onLocalSelecionado(Place place) {
         proximaPagina();
+        if (place != null)
+            ocorrencia.setLocal(place.getAddress().toString());
     }
 
     @Override
     public void onDescricaoCompleta(String titulo, String descricao) {
         proximaPagina();
+        ocorrencia.setTitulo(titulo);
+        ocorrencia.setDescricao(descricao);
     }
 
     @Override
-    public void onOcorrenciaSubmetida(String nome, String telefone, boolean feedback) {
-        primeiraPagina();
+    public void onOcorrenciaSubmetida(String nome, String telefone, String email, boolean feedback) {
+        proximaPagina();
+        ocorrencia.setNome(nome);
+        ocorrencia.setTelefone(telefone);
+        ocorrencia.setEmail(email);
+        ocorrencia.setFeedback(feedback);
+    }
+
+    @Override
+    public void onProtocoloRecebido(boolean fecharApp) {
+        if (fecharApp) finish();
+        else primeiraPagina();
     }
 
     private void proximaPagina() {
@@ -112,13 +132,14 @@ public class MainActivity extends AppCompatActivity
                 case 1: return SelecionarLocalFragment.newInstance();
                 case 2: return DescreverOcorrenciaFragment.newInstance();
                 case 3: return SubmeterOcorrenciaFragment.newInstance();
+                case 4: return ProtocoloFragment.newInstance(ocorrencia.isFeedback());
                 default: return null;
             }
         }
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 }

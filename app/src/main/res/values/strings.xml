@@ -32,7 +32,7 @@
     <!-- Ações -->
     <string name="action_selecionar_local">Selecionar no mapa</string>
     <string name="action_nao_informar_local">Não informar</string>
-    <string name="action_pronto">Pronto</string>
+    <string name="action_avancar">Avançar</string>
     <string name="action_nova_solicitacao">Nova solicitação</string>
     <string name="action_sair">Sair</string>
     <string name="action_sim">Sim</string>

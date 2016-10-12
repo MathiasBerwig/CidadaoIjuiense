@@ -54,3 +54,4 @@
     <!-- Diálogos -->
     <string name="dialog_tit_confirmacao_anonimo">Você tem certeza?</string>
     <string name="dialog_mes_confirmacao_anonimo">Desta forma não será possível acompanhar o andamento da sua solicitação.</string>
+</resources>

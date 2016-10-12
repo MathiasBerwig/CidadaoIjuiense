@@ -93,7 +93,7 @@
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <!-- Botão Submeter -->
         <Button
@@ -104,6 +104,7 @@
             android:layout_marginLeft="-4dp"
             android:layout_marginRight="-4dp"
             android:layout_weight="0"
+            android:drawableEnd="@drawable/ic_navigate_next_white_36dp"
             android:text="@string/action_avancar"
             android:textSize="20sp" />
     </LinearLayout>

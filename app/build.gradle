@@ -50,4 +50,9 @@ dependencies {
      * ColorTextView
      */
     compile 'loic.teillard.colortextview:colortextview:1.0.0'
+
+    /**
+     * Android-SpinKit
+     */
+    compile 'com.github.ybq:Android-SpinKit:1.1.0'
 }

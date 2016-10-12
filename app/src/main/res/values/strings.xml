@@ -42,4 +42,8 @@
     <string name="hint_nome_usuario">SEU NOME</string>
     <string name="hint_email_usuario">SEU EMAIL</string>
     <string name="hint_telefone_usuario">SEU TELEFONE</string>
+    <string name="dialog_tit_confirmacao_anonimo">Você tem certeza?</string>
+    <string name="dialog_mes_confirmacao_anonimo">Desta forma não será possível acompanhar o andamento da sua solicitação.</string>
+    <string name="action_sim">Sim</string>
+    <string name="action_cancelar">Cancelar</string>
 </resources>

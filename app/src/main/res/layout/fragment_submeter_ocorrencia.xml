@@ -89,6 +89,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cb_receber_feedback" />
-    </LinearLayout>
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <!-- Botão Submeter -->
+        <Button
+            android:id="@+id/btn_submeter_ocorrencia"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:layout_weight="0"
+            android:text="@string/action_pronto"
+            android:textSize="20sp" />
+    </LinearLayout>
 </RelativeLayout>

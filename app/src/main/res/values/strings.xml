@@ -15,6 +15,8 @@
     <string name="text_endereco_ocorrencia_3">DA OCORRÊNCIA?</string>
     <string name="text_descricao_ocorrencia_1">CONTE-NOS O</string>
     <string name="text_descricao_ocorrencia_2">PROBLEMA</string>
+    <string name="text_submeter_ocorrencia_1">SUBMETER</string>
+    <string name="text_submeter_ocorrencia_2">OCORRÊNCIA</string>
 
     <!-- Título de Ocorrências-->
     <string name="ocor_tit_sinalizacao_e_placas">Sinalização e Placas</string>
@@ -27,12 +29,17 @@
     <string name="action_selecionar_local">Selecionar no mapa</string>
     <string name="action_nao_informar_local">Não informar</string>
     <string name="action_pronto">Pronto</string>
+    <string name="cb_receber_feedback">Desejo receber feedback sobre esta solicitação</string>
+    <string name="cb_ocorrencia_anonima">Prefiro não me identificar</string>
 
     <!-- Toasts -->
-    <string name="toast_selecione_local">Mudou de ideia? Clique no botão \'NÃO INFORMAR\'.</string>
+    <string name="toast_selecione_local">Mudou de ideia? Clique no botão \'NÃO INFORMAR\'</string>
+    <string name="toast_preencha_corretamente">Preencha os campos corretamente</string>
 
     <!-- Hint de Edits -->
     <string name="hint_titulo_ocorrencia">TÍTULO DA OCORRÊNCIA</string>
     <string name="hint_descricao_ocorrencia">DESCRIÇÃO DA OCORRÊNCIA</string>
-    <string name="toast_preencha_corretamente">Preencha os campos corretamente</string>
+    <string name="hint_nome_usuario">SEU NOME</string>
+    <string name="hint_email_usuario">SEU EMAIL</string>
+    <string name="hint_telefone_usuario">SEU TELEFONE</string>
 </resources>

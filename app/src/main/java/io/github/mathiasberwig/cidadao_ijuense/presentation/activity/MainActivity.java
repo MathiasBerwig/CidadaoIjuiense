@@ -18,12 +18,14 @@ import io.github.mathiasberwig.cidadao_ijuense.presentation.adapter.CardPagerAda
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.DescreverOcorrenciaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarCategoriaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SelecionarLocalFragment;
+import io.github.mathiasberwig.cidadao_ijuense.presentation.fragment.SubmeterOcorrenciaFragment;
 import io.github.mathiasberwig.cidadao_ijuense.presentation.view.CustomViewPager;
 
 public class MainActivity extends AppCompatActivity
         implements CardPagerAdapter.OcorrenciaClickListener,
         SelecionarLocalFragment.OnLocalSelecionadoListener,
-        DescreverOcorrenciaFragment.OnDescricaoCompletaListener {
+        DescreverOcorrenciaFragment.OnDescricaoCompletaListener,
+        SubmeterOcorrenciaFragment.OnSubmeterOcorrenciaListener {
 
     private static final String TAG = "MainActivity";
 
@@ -84,9 +86,18 @@ public class MainActivity extends AppCompatActivity
         proximaPagina();
     }
 
+    @Override
+    public void onOcorrenciaSubmetida(String nome, String telefone, boolean feedback) {
+        primeiraPagina();
+    }
+
     private void proximaPagina() {
         final int currentItem = viewPager.getCurrentItem();
         viewPager.setCurrentItem(currentItem + 1, true);
+    }
+
+    private void primeiraPagina() {
+        viewPager.setCurrentItem(0, true);
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -100,9 +111,8 @@ public class MainActivity extends AppCompatActivity
                 case 0: return SelecionarCategoriaFragment.newInstance();
                 case 1: return SelecionarLocalFragment.newInstance();
                 case 2: return DescreverOcorrenciaFragment.newInstance();
-                default:
-                    // TODO: Remover após colocar todos os fragmentos
-                    return SelecionarCategoriaFragment.newInstance();
+                case 3: return SubmeterOcorrenciaFragment.newInstance();
+                default: return null;
             }
         }
 

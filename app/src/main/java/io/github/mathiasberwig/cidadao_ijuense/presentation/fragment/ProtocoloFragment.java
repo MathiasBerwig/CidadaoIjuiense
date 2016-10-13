@@ -21,7 +21,7 @@ public class ProtocoloFragment extends Fragment {
     private static final String TAG = "ProtocoloFragment";
 
     private boolean feedback;
-    private boolean loading = true;
+//    private boolean loading = true;
 
     // Views
     @BindView(R.id.tv_status_protocolo) TextView tvStatusProtocolo;
@@ -60,16 +60,17 @@ public class ProtocoloFragment extends Fragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
+    public void onResume() {
+        super.onResume();
+        // TODO: Isso não funciona como deveria
+        // Pelo menos serviu pra gravar o vídeo da apresentação
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (loading) mostrarSucesso();
+                mostrarSucesso();
             }
-        }, 4000);
+        }, 20000);
     }
 
     @Override
@@ -91,7 +92,7 @@ public class ProtocoloFragment extends Fragment {
 
     @OnClick(R.id.btn_nova_solicitacao)
     public void novaSolicitacao() {
-        restaurarEstado();
+//        restaurarEstado();
         listener.onProtocoloRecebido(false);
     }
 
@@ -101,7 +102,7 @@ public class ProtocoloFragment extends Fragment {
     }
 
     private void mostrarSucesso() {
-        loading = false;
+//        loading = false;
         viewSwitcher.showNext();
         tvStatusProtocolo.setText(R.string.text_protocolo_enviado);
         tvOrientacaoProtocolo.setText(feedback ?

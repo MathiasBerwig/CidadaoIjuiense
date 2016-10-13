@@ -55,4 +55,16 @@ dependencies {
      * Android-SpinKit
      */
     compile 'com.github.ybq:Android-SpinKit:1.1.0'
+
+    /**
+     * EasyImage
+     * https://github.com/jkwiecien/EasyImage
+     */
+    compile 'com.github.jkwiecien:EasyImage:1.2.3'
+
+    /**
+     * Dexter
+     * https://github.com/Karumi/Dexter
+     */
+    compile 'com.karumi:dexter:2.2.2'
 }

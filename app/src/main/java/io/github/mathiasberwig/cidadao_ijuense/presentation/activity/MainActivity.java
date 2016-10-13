@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.badoualy.stepperindicator.StepperIndicator;
 import com.google.android.gms.location.places.Place;
+import com.karumi.dexter.Dexter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
+        Dexter.initialize(this);
 
         setupToolbar();
         setupViewPager();

@@ -60,4 +60,7 @@
     <!-- Diálogos -->
     <string name="dialog_tit_confirmacao_anonimo">Você tem certeza?</string>
     <string name="dialog_mes_confirmacao_anonimo">Desta forma não será possível acompanhar o andamento da sua solicitação.</string>
+
+    <!-- Erros -->
+    <string name="error_permission_camera">Precisamos acessar a câmera para tirar fotos :)</string>
 </resources>
